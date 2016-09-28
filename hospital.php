@@ -57,6 +57,76 @@
 			body{
 				padding-top:50px;
 			}
+			/*======================
+	DOCTOR PAGE
+  ======================*/  
+.jst-cov {
+    float: left;
+    width: 100%;
+	padding-bottom:15px;
+}
+.doctor {
+	border-bottom:2px solid #ffe073;
+	padding-bottom:16px;
+	margin-bottom:40px;
+}
+.doctor img {
+	float:left;
+}
+.doctor h2 {
+	color:#383d48;
+	font-weight:800;
+	font-size:13.5px;
+	text-align:center;
+	text-transform:uppercase;
+	
+}
+.doctor h2 span {
+	display:block;
+	color:#4c6880;
+	font-size:13px;
+	font-weight:normal;
+}
+.social-net {
+  float: none;
+  text-align: center;
+  width: 64px;
+  height: 30px;
+  clear: both;
+  margin: 0 auto;
+}
+.social-net a {
+	padding:14px 18px 5px 0;
+	float:left;
+}
+.face-d {
+	background:url(../img/icons/face.png) left top no-repeat;
+}
+.twitt-d {
+	background:url(../img/icons/twitt.png) left top no-repeat;
+}
+.google-d {
+	background:url(../img/icons/google.png) left top no-repeat;
+}
+.face-d:hover {
+	background:url(../img/icons/face-hov.png) left top no-repeat;
+}
+.twitt-d:hover {
+	background:url(../img/icons/twitt-hov.png) left top no-repeat;
+}
+.google-d:hover {
+	background:url(../img/icons/google-hov.png) left top no-repeat;
+}
+
+.doc > .active , .doc:hover .doctor {
+	border-bottom:2px solid #6acff0; 
+}
+.doc > .doctor h3.active , .doc:hover h3{
+	background: #6acff0; 
+	color:#fff;
+}
+/*======================
+	DOCTOR PAGE
 		</style>
 
 	</head>
@@ -71,7 +141,7 @@
 		?>
 				<ul class="nav navbar-nav">
 					<li><a href="index.php" style="font-size:16px;">Home</a></li>
-					<li class="active"><a href="#" style="font-size:16px;">Find a doctor</a></li>
+					<li class="active"><a href="#" style="font-size:16px;">Find Hospital</a></li>
 					<li class="dropdown">
 					<a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#" style="font-size:16px;">Doctor Accessories<span class="caret"></span></a>
 					<ul role="menu" class="dropdown-menu">
@@ -149,7 +219,7 @@
 							?>
 											<ul class="nav navbar-nav">
 												<li><a href="index.php" style="font-size:16px;">Home</a></li>
-												<li class="active"><a href="#" style="font-size:16px;">Find a doctor</a></li>
+												<li class="active"><a href="#" style="font-size:16px;">Find Hospital</a></li>
 												<?php 
 													if($type=="doctor")
 													{
@@ -180,7 +250,7 @@
 															<li><a href="index.php" style="font-size:16px;" name="logout" id="logout">Logout</a></li>
 														</form>-->
 														<li>
-															<form action="doctor.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
+															<form action="hospital.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
 																<p style="text-align:center;"><input name="logout" type="submit" class="btn btn-success" value="Sign Out"></p>
 															</form>
 														</li>
@@ -304,7 +374,7 @@
 							?>				
 										<ul class="nav navbar-nav">
 												<li><a href="index.php" style="font-size:16px;">Home</a></li>
-												<li class="active"><a href="#" style="font-size:16px;">Find a doctor</a></li>
+												<li class="active"><a href="#" style="font-size:16px;">Find Hospital</a></li>
 												<?php 
 													if($type=="doctor")
 													{
@@ -335,7 +405,7 @@
 															<li><a href="index.php" style="font-size:16px;" name="logout" id="logout">Logout</a></li>
 														</form>-->
 														<li>
-															<form action="doctor.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
+															<form action="hospital.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
 																<p style="text-align:center;"><input name="logout" type="submit" class="btn btn-success" value="Sign Out"></p>
 															</form>
 														</li>
@@ -370,7 +440,7 @@
 							?>
 										<ul class="nav navbar-nav">
 											<li><a href="index.php" style="font-size:16px;">Home</a></li>
-											<li class="active"><a href="#" style="font-size:16px;">Find a doctor</a></li>
+											<li class="active"><a href="#" style="font-size:16px;">Find Hospital</a></li>
 											<?php 
 												if($_SESSION['type']=="doctor")
 												{
@@ -401,7 +471,7 @@
 															<li><a href="index.php" style="font-size:16px;" name="logout" id="logout">Logout</a></li>
 														</form>-->
 														<li>
-															<form action="doctor.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
+															<form action="hospital.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
 																<p style="text-align:center;"><input name="logout" type="submit" class="btn btn-success" value="Sign Out"></p>
 															</form>
 														</li>
@@ -426,12 +496,12 @@
 		<!--\\\\\\\\\\\\\\start//////////////////////////////-->
 		
 		<div class="container" style="margin-top:40px;">
-			<h2>Search Your Doctor Wherever in Rwanda</h2>
+			<h2>Search the hospitals Wherever in Rwanda</h2>
 			<br>
-			<p style="font-size:16px;">MeLife website or platform is a very popular & easy way to find physicians information in Rwanda. Doctors search page publish the information of many MBBS & expertise male & female doctors in Rwanda. You can easily find ENT, Gynecology, Cardiology, Eye, Pediatric, Chest, Liver and many more Rwandan specialist doctors list on this website. We are constantly trying to publish accurate and update Rwandan doctors information. We are committed to improve health care services in Rwanda</p>
+			<p style="font-size:16px;">MeLife platform is an easy way to find physicians information in Rwanda from different hospitals. You can easily choose a hospital and immediately make an appoint.  We are constantly trying to publish accurate and update Rwandan hospitals information. We are committed to improve health care services in Rwanda.</p>
 		</div>
 		<!--\\\\\\\\\\\\\search bar starts here//////////////-->
-		<form role="search" action="doctor.php" role="form"  method="post" enctype="multipart/form-data">
+		<form role="search" action="hospital.php" role="form"  method="post" enctype="multipart/form-data">
 		<div class="container" style="margin-top:40px;">
 			<div class="row">    
 				<div class="col-xs-8 col-xs-offset-2">
@@ -475,7 +545,7 @@
                         <div class="tab-content">
 							<div class="tab-pane fade in active" id="section-1">
 								<br><br>
-								<form action="doctor.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
+								<form action="hospital.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
 									<div class="form-group" style="padding-left:59px;">
 										<input type="text" name="regemail" id="form-elem-8" class="form-control" placeholder="Email address" style="height:46px;width:449px">
 									</div><br><br>
@@ -497,7 +567,7 @@
 							</div>
 							<div class="tab-pane fade" id="section-2">
 								<br><br>
-								<form action="doctor.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
+								<form action="hospital.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
 									<div class="form-group" style="padding-left:59px;">
 										<input type="text" id="form-elem-6" name="email" class="form-control" placeholder="Email address" style="height:46px;width:449px">
 									</div><br><br>
@@ -551,7 +621,7 @@
                         <div class="tab-content">
 							<div class="tab-pane fade in active" id="section-3">
 								<br><br>
-								<form action="doctor.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
+								<form action="hospital.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
 									<div class="form-group" style="padding-left:59px;">
 										<input type="text" id="form-elem-6" name="email" class="form-control" placeholder="Email address" style="height:46px;width:449px">
 									</div><br><br>
@@ -567,7 +637,7 @@
 							</div>
 							<div class="tab-pane fade" id="section-4">
 								<br><br>
-								<form action="doctor.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
+								<form action="hospital.php" role="form" class="form-inline" method="post" enctype="multipart/form-data">
 									<div class="form-group" style="padding-left:59px;">
 										<input type="text" name="regemail" id="form-elem-8" class="form-control" placeholder="Email address" style="height:46px;width:449px">
 									</div><br><br>
@@ -606,36 +676,31 @@
 				</div>
 			</div>
 		</div>
+		
 		<!--\\\\\\\\\\\\\Log In form ends here/////////////-->
 		
-		<!--\\\\\\\\\\\\\\doctor starts here///////////////-->
+		<!--\\\\\\\\\\\\\\Hospital starts here///////////////-->
 		<div class="demo-area"  style="margin-top:40px;margin-left:285px;">
             <div class="container">
 				<?php
-					$i=0;
+					/*$i=0;
 					$name=array();
-					$qual=array();
-					$desig=array();
-					$expert=array();
-					$organ=array();
-					$cham=array();
-					$loca=array();
-					$phn=array();
-					$mail=array();
-					$d_id=array();
+					$img=array();
+					$expertise=array();
+				
 					if(isset($_POST['search']))
 					{
 						$t=0;
-						$s="select * from doctors where name LIKE'%".$_POST['search']."%'";
+						$s="select * from hospital where name LIKE'%".$_POST['search']."%'";
 						if(isset($_POST['search_param']))
 						{
-							if($_POST['search_param']=="specialty")
+							/*if($_POST['search_param']=="specialty")
 							{
-								$s="select * from doctors where  expertise LIKE'".$_POST['search']."%'";
-							}
-							else if($_POST['search_param']=="name")
+								$s="select * from hospital_specialty where  expertise LIKE'".$_POST['search']."%' and id_Hsp=id_hosp";
+							}*/
+						   /*if($_POST['search_param']=="name")
 							{
-								$s="select * from doctors where name LIKE'".$_POST['search']."%'";
+								$s="select * from hospital where name LIKE'".$_POST['search']."%'";
 							}
 							else
 							{
@@ -645,24 +710,17 @@
 									$t=1;
 									while($row = $result->fetch_assoc())
 									{ 
-										$d_id[$i]=$row["d_id"];
+										$hosp_id[$i]=$row["id"];
 										$name[$i]=$row["name"];
-										$qual[$i]=$row["qualification"];
-										$desig[$i]=$row["designation"];
-										$expert[$i]=$row["expertise"];
-										$organ[$i]=$row["organization"];
-										$cham[$i]=$row["chamber"];
-										$loca[$i]=$row["location"];
-										$phn[$i]=$row["phn"];
-										$mail[$i]=$row["email"];
+										$img[$i]=$row["img"];
 										$i=$i+1;
 									}
 								}
-								else
+								/*else
 								{
-									$s="select * from doctors where  expertise LIKE'".$_POST['search']."%'";
-								}
-							}
+									$s="select * from hospital where  expertise LIKE'".$_POST['search']."%'";
+								}*/
+							/*}
 						}
 						$result = $conn->query($s);
 						if ($result->num_rows!=0&&$t==0) 
@@ -780,8 +838,8 @@
 					{
 					?>
 					<div class="panel-footer" style="text-align: center;padding-top:22px;">
-						<form role="search" action="appointment.php" role="form"  method="post" enctype="multipart/form-data">
-							<button class="btn btn-beau" type="submit" name="appointment" value=<?php echo $d_id[$j];?>>Request Appointment<span class="glyphicon glyphicon-hand-right" style="padding-left:10px;"></span></button>
+						<form role="search" action="Make Appointment.php" role="form"  method="post" enctype="multipart/form-data">
+							<button class="btn btn-beau" type="submit" name="Make Appointment" value=<?php echo $d_id[$j];?>>Request Make Appointment<span class="glyphicon glyphicon-hand-right" style="padding-left:10px;"></span></button>
 						</form>
 					</div>
 					<?php
@@ -790,16 +848,154 @@
                 </div>
 				<?php
 					}
-				?>
+				*/?>
+				
 
             </div>
         </div>
 		
-		<!--\\\\\\\\\\\\\\doctor starts here///////////////-->
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+           <h2>KIGALI HOSPITAL
+		     <span><input type="button" value="Make Appointment" name="btn"></span></h2>
+			 </a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
 
-			<!-- FOOTER -->	
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+          <h2>KIGALI HOSPITAL
+		   <span><input type="button" value="Make Appointment" name="btn"></span></h2>
+		   </a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+            <h2>KIGALI HOSPITAL
+			 <span><input type="button" value="Make Appointment" name="btn"></span></h2></a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+           <h2>KIGALI HOSPITAL
+		    <span><input type="button" value="Make Appointment" name="btn"></span></h2></a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+           <h2>KIGALI HOSPITAL
+		    <span><input type="button" value="Make Appointment" name="btn"></span></h2></a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+         <h2>KIGALI HOSPITAL
+		  <span><input type="button" value="Make Appointment" name="btn"></span><h2></a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+            <h2>KIGALI HOSPITAL
+			 <span><input type="button" value="Make Appointment" name="btn"></span></h2></a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+            <h2>KIGALI HOSPITAL
+			 <span><input type="button" value="Make Appointment" name="btn"></span></h2></a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+
+        
+
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+            <h2>KIGALI HOSPITAL
+			 <span><input type="button" value="Make Appointment" name="btn"></span></h2></a>
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+
+        <div class="col-sm-3 doc">
+        <div class="doctor">
+        	<a href="appointment.php"><img src="img/kigali.jpg" alt="263">
+            <div class="social-net">
+            	<a href="Doctors.php#" class="face-d"></a>
+                <a href="Doctors.php#" class="twitt-d"></a>
+                <a href="Doctors.php#" class="google-d"></a>
+            </div><!-- /.social-net -->
+            <h2>KIGALI HOSPITAL
+			 <span><input type="button" value="Make Appointment" name="btn"></span></h2></a>
 			
-		</div><!-- /.container -->
+        </div><!-- /.doctor -->
+    	</div><!-- /.col-sm-3 -->
+    </div><!-- /.row -->
+    </div><!-- /.container -->
+    </div><!-- /.first-section -->
+     <!--==================================
+       		news section parts ends here
+          ==================================-->
+		
+		<!--\\\\\\\\\\\\\\doctor starts here///////////////-->
 		<link href="css/font-awesome.min.css" rel="stylesheet">
 		<?php
 			include "includes/footer.php";
